@@ -9,29 +9,31 @@
     <script src="marker.js"></script>
   </head>
   <body>
-    <div class="header">
-      <label>
-        <input type="radio" name="color" value="0"/><span>Erase</span>
-      </label>
-      <label>
-        <input type="radio" name="color" value="1" checked="checked"/><span>Green</span>
-      </label>
-      <label>
-        <input type="radio" name="color" value="2"/><span>Red</span>
-      </label>
-    </div>
-    <div class="spacer"></div>
-    <div class="highlight">
-      <h1>Marker</h1>
-      <h2>Instructions</h2>
-      <h4>Highlighting</h4>
-      <p>On desktop, simply click and drag from the first word to the last word you wish to highlight. You may also click individual words.</p>
-      <p>On mobile, touch and hold for 375ms and a balloon will pop up showing the word you have selected. Drag your finger to the desired ending word. (This can be seen on desktop as well if you hold the left mouse button without dragging for 375ms). This allows the user to scroll normally and highlight when desired.</p>
-      <p>Highlighted text can span multiple paragraphs and element types. You can even highlight over, within, into, and out of other highlights. When you release your mouse / finger the highlights get normalized so that any "highlight within a highlight" gets split apart and adjacent highlights get merged together. This way the user is able to highlight as recklessly as they please and the outcome will remain neatly organized.</p>
-      <h4>Erasing</h4>
-      <p>Exactly the same as highlighting, simply use the "erase" color.</p>
-      <h4>Color selection</h4>
-      <p>In this demo, you can change the color by selecting one of the options from the floating header.</p>
+    <div class="page">
+      <div class="header">
+        <label>
+          <input type="radio" name="color" value="0"/><span>Erase</span>
+        </label>
+        <label>
+          <input type="radio" name="color" value="1" checked="checked"/><span>Green</span>
+        </label>
+        <label>
+          <input type="radio" name="color" value="2"/><span>Red</span>
+        </label>
+      </div>
+      <div class="spacer"></div>
+      <div class="highlight">
+        <h1>Marker</h1>
+        <h2>Instructions</h2>
+        <h4>Highlighting</h4>
+        <p>On desktop, simply click and drag from the first word to the last word you wish to highlight. You may also click individual words.</p>
+        <p>On mobile, touch and hold for 375ms and a balloon will pop up showing the word you have selected. Drag your finger to the desired ending word. (This can be seen on desktop as well if you hold the left mouse button without dragging for 375ms). This allows the user to scroll normally and highlight when desired.</p>
+        <p>Highlighted text can span multiple paragraphs and element types. You can even highlight over, within, into, and out of other highlights. When you release your mouse / finger the highlights get normalized so that any "highlight within a highlight" gets split apart and adjacent highlights get merged together. This way the user is able to highlight as recklessly as they please and the outcome will remain neatly organized.</p>
+        <h4>Erasing</h4>
+        <p>Exactly the same as highlighting, simply use the "erase" color.</p>
+        <h4>Color selection</h4>
+        <p>In this demo, you can change the color by selecting one of the options from the floating header.</p>
+      </div>
     </div>
     <style>
       @import url("https://fonts.googleapis.com/css?family=Nunito+Sans:400,700");
@@ -44,9 +46,9 @@
         padding: 1em;
       }
 
-      body {
-        max-width: 768px;
+      .page {
         margin: auto;
+        max-width: 768px;
       }
 
       div {
