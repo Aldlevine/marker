@@ -1,4 +1,4 @@
-export function getElementInSpray (fx, fy, tx, ty, sel, step=16, angle=Math.PI/6, points=3)
+export function getElementInSpray (fx, fy, tx, ty, sel, step=16, angle=Math.PI/4, points=3)
 {
   let dx = tx - fx;
   let dy = ty - fy;
@@ -7,7 +7,7 @@ export function getElementInSpray (fx, fy, tx, ty, sel, step=16, angle=Math.PI/6
   let ny = dy / magnitude;
   let sx = nx * step;
   let sy = ny * step;
-  let sprayAngle = Math.atan2(ny/nx);
+  let sprayAngle = Math.atan2(ny, nx);
   let startAngle = sprayAngle - (angle*points/2);
 
   // try center
