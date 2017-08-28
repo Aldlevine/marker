@@ -1,0 +1,33 @@
+.marker {
+  line-height: 1.5;
+  user-select: none;
+  cursor: text;
+  font-size: 18px;
+  -webkit-tap-highlight-color: transparent;
+
+  .mark-word {
+    position: relative;
+    display: inline-block;
+    padding: 0 resolve($space / 2);
+    border-radius: $radius;
+  }
+
+  [data-mark] {
+    border-radius: $radius;
+    box-decoration-break: clone;
+
+    [data-mark] {
+      border-radius: 0;
+
+      &:first-child {
+        border-top-left-radius: $radius;
+        border-bottom-left-radius: $radius;
+      }
+      &:last-child {
+        border-top-right-radius: $radius;
+        border-bottom-right-radius: $radius;
+      }
+    }
+  }
+}
+

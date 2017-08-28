@@ -1,0 +1,45 @@
+{
+  "name": "marker",
+  "version": "1.0.0",
+  "description": "A responsive text highlighting / selection engine.",
+  "main": "index.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1",
+    "build": "taskr",
+    "watch": "taskr watch"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/Aldlevine/marker.git"
+  },
+  "author": "Aaron Levine <ald.levine@gmail.com>",
+  "license": "MIT",
+  "bugs": {
+    "url": "https://github.com/Aldlevine/marker/issues"
+  },
+  "homepage": "https://github.com/Aldlevine/marker#readme",
+  "devDependencies": {
+    "@taskr/babel": "^1.1.0",
+    "@taskr/clear": "^1.1.0",
+    "@taskr/concat": "^1.1.0",
+    "@taskr/esnext": "^1.1.0",
+    "@taskr/postcss": "^1.1.2",
+    "@taskr/uglify": "^1.1.0",
+    "@taskr/watch": "^1.1.0",
+    "babel-preset-env": "^1.6.0",
+    "browserify": "^14.4.0",
+    "cssnano": "^3.10.0",
+    "postcss-color-function": "^4.0.0",
+    "postcss-cssnext": "^3.0.2",
+    "postcss-extend": "^1.0.5",
+    "postcss-functions": "^3.0.0",
+    "postcss-import": "^10.0.0",
+    "postcss-math": "0.0.8",
+    "postcss-nested": "^2.1.2",
+    "postcss-property-lookup": "^2.0.0",
+    "postcss-remove-root": "0.0.2",
+    "postcss-simple-vars": "^4.1.0",
+    "postcss-vertical-rhythm": "^1.1.5",
+    "taskr": "^1.1.0"
+  }
+}
