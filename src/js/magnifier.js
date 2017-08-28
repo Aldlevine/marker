@@ -13,10 +13,14 @@ export class Magnifier
 
   show (el, x)
   {
-    x = x + (window.scrollX || document.documentElement.scrollLeft);
     let $el = $(el);
     let pos = $el.position();
-    let bodyWidth = $('html').outerWidth();
+    let $body = $('body');
+    let bodyWidth = $body.width();
+    let bodyOuterWidth = $body.outerWidth();
+    let bodyPos = $body.position();
+    x = x + (window.scrollX || document.documentElement.scrollLeft);
+    x = x - (bodyOuterWidth - bodyWidth)/2;
     this.text.html($el.html());
 
     this.element.attr('data-mark', this.marker.color);
@@ -24,7 +28,7 @@ export class Magnifier
     this.element.attr('data-mark-last', $el.is(':last-child'));
 
     let magWidth = this.element.outerWidth();
-    let leftOffset = Math.min(Math.max((x - magWidth/2), 0), bodyWidth - magWidth);
+    let leftOffset = Math.min(Math.max((x - magWidth/2), 0 - bodyPos.left), bodyOuterWidth + bodyPos.left - magWidth);
     leftOffset = Math.max(Math.min(pos.left + $el.width() - magWidth/2, leftOffset), pos.left - magWidth/2);
     let topOffset = pos.top - this.element.height();
 
