@@ -120,6 +120,7 @@ export class Marker
 
   moveHighlight (to)
   {
+    this.end = to;
     this.highlight(this.start, this.end = to);
   }
 
@@ -288,7 +289,7 @@ export class Marker
       if (!el)
       {
         // el = getElementInLine(x, y, this.startX, this.startY, '.mark-word');
-        el = getElementInSpray(x, y, this.startX, this.startY, '.mark-word');
+        el = getElementInSpray(x, y, this.endX, this.endY, '.mark-word');
       }
 
       if (el)
